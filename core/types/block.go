@@ -532,6 +532,10 @@ func (b *Block) Hash() common.Hash {
 	return h
 }
 
+func (b *Block) GetTransactions() Transactions {
+	return b.transactions
+}
+
 type Blocks []*Block
 
 // HeaderParentHashFromRLP returns the parentHash of an RLP-encoded
